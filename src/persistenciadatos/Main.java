@@ -1,12 +1,18 @@
 package persistenciadatos;
 
-import java.util.*;
+import static persistenciadatos.ManejoArchivos.*;
 
 public class Main {
 
     public static void main(String[] args) {
+        CrearArchivo("archivo\\Hola.txt"); //ruta relativa que de dirige al proyecto trabajado
+        CrearArchivo("C:\\JavaArchivos\\hola.txt");
+           
+    }
 
-//        List lista1 = new ArrayList(); //Estas colecciones son interfaces, no son clases normales
+}
+
+ //List lista1 = new ArrayList(); //Estas colecciones son interfaces, no son clases normales
 //        
 //        //LA LISTA RESPETA EL ORDEN QUE ASIGNAMOS A LOS DATOS 
 //        
@@ -67,44 +73,40 @@ public class Main {
         
         //MAP es independiente, no hereda de Colletion, es distinto
         //cada dato se almacena con clave y valor 
-        Map numeros = new HashMap();
+//        Map numeros = new HashMap();
+//
+//        //asignar datos
+//        numeros.put(1, "Uno"); //clave y valor)
+//        numeros.put(2, "Dos");
+//        numeros.put(3, "Tres");
+//        numeros.put(4, "Cuatro");
+//        numeros.put(5, "Cinco");
+//        
+//        System.out.println(numeros);
+//        
+//        //acceder a los datos
+//        //LAS CLAVES SERÍAN COMO LOS ÍNDICES 
+//        
+//        System.out.println(numeros.get(1));
+//        
+//        //iterar los datos
+//        
+//       // for(Object valores : numeros.keySet()){ //con esto recupero las claves, tambien puedo poner .values
+//        //    System.out.println(valores);
+//        
+//        //iterar para recuperar clave y valor
+//        
+//        for(Object clave : numeros.keySet()){
+//            System.out.println(clave+" "+ numeros.get(clave));
+//            
+//        }
+//        
+//        //aliminar algún elemento
+//        
+//        numeros.remove(5);
+//        System.out.println(numeros);
+//        
+//        //eliminar todo
+//        
+//        numeros.clear();
 
-        //asignar datos
-        numeros.put(1, "Uno"); //clave y valor)
-        numeros.put(2, "Dos");
-        numeros.put(3, "Tres");
-        numeros.put(4, "Cuatro");
-        numeros.put(5, "Cinco");
-        
-        System.out.println(numeros);
-        
-        //acceder a los datos
-        //LAS CLAVES SERÍAN COMO LOS ÍNDICES 
-        
-        System.out.println(numeros.get(1));
-        
-        //iterar los datos
-        
-       // for(Object valores : numeros.keySet()){ //con esto recupero las claves, tambien puedo poner .values
-        //    System.out.println(valores);
-        
-        //iterar para recuperar clave y valor
-        
-        for(Object clave : numeros.keySet()){
-            System.out.println(clave+" "+ numeros.get(clave));
-            
-        }
-        
-        //aliminar algún elemento
-        
-        numeros.remove(5);
-        System.out.println(numeros);
-        
-        //eliminar todo
-        
-        numeros.clear();
-
-           
-    }
-
-}
