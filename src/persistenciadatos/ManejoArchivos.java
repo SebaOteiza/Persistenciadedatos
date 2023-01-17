@@ -1,29 +1,29 @@
-
-
 package persistenciadatos;
+
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 public class ManejoArchivos {
-    
-    public static void CrearArchivo(String nombreArchivo){
+
+    //CREAR UN ARCHIVO
+    public static void CrearArchivo(String nombreArchivo) {
         File archivo = new File(nombreArchivo); //objeto de tipo file 
-        
+
         try {
             //crear un archivo
             PrintWriter salida = new PrintWriter(archivo); //si el archivo no existe lo creamos 
             salida.close();
             System.out.println("Se creó el archivo");
         } catch (FileNotFoundException ex) {
-           ex.printStackTrace(System.out);
+            ex.printStackTrace(System.out);
         }
     }
-    
-    public static void EscribirArchivo(String nombreArchivo, String contenido){
+
+    //ESCRIBIR EN EL ARCHIVO CREADO
+    public static void EscribirArchivo(String nombreArchivo, String contenido) {
         File archivo = new File(nombreArchivo); //objeto de tipo file 
-        
+
         try {
             //crear un archivo
             PrintWriter salida = new PrintWriter(new FileWriter(archivo, true)); //si el archivo no existe lo creamos 
@@ -31,9 +31,31 @@ public class ManejoArchivos {
             salida.print(contenido);
             salida.close();
             System.out.println("Se escribio el archivo");
-            
+
         } catch (FileNotFoundException ex) {
-           ex.printStackTrace(System.out);
+            ex.printStackTrace(System.out);
+        } catch (IOException ex) {
+            ex.printStackTrace(System.out);
+        }
+    }
+
+    //LEER EL ARCHIVO CREADO
+    public static void leerArchivo(String nombreArchivo) {
+        File archivo = new File(nombreArchivo); //objeto de tipo file 
+
+        try {
+            //crear un archivo
+            BufferedReader entrada = new BufferedReader(new FileReader(archivo));
+            //para leer cada linea
+            String lectura = entrada.readLine();
+            while (lectura != null) {
+                System.out.println(lectura);
+                lectura = entrada.readLine();
+            }
+            entrada.close();
+
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace(System.out);
         } catch (IOException ex) {
             ex.printStackTrace(System.out);
         }

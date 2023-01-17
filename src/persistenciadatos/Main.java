@@ -5,13 +5,20 @@ import static persistenciadatos.ManejoArchivos.*;
 public class Main {
 
     public static void main(String[] args) {
+        
+        //CREAR ARCHIVO
         //CrearArchivo("archivo\\Hola.txt"); //ruta relativa que de dirige al proyecto trabajado
         //CrearArchivo("C:\\JavaArchivos\\hola.txt");
         
-        EscribirArchivo("archivo\\Hola.txt", "Hola desde Java");
+        //ESCRIBIR EN EL ARCHIVO CREADO
+       /* EscribirArchivo("archivo\\Hola.txt", "Hola desde Java");
         EscribirArchivo("archivo\\Hola.txt", "Hola Mundo");
         EscribirArchivo("archivo\\Hola.txt", "Hola Maldito desgraciado");
-        //al hacer lo de arriba, se va sobreescribiendo el archivo
+        //al hacer lo de arriba, se va sobreescribiendo el archivo */
+       
+       //LEER EL ARCHIVO CREADO
+       
+        leerArchivo("archivo\\Hola.txt");
            
     }
 
