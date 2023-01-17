@@ -18,7 +18,11 @@ public class Main {
        
        //LEER EL ARCHIVO CREADO
        
-        leerArchivo("archivo\\Hola.txt");
+       // leerArchivo("archivo\\Hola.txt");
+       
+       //ELIMINAR UN ARCHIVO
+       
+        eliminarArchivo("archivo\\Hola.txt");
            
     }
 

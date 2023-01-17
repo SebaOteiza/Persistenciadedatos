@@ -60,5 +60,14 @@ public class ManejoArchivos {
             ex.printStackTrace(System.out);
         }
     }
+    
+    //ALIMINAR UN ARCHIVO
+    public static void eliminarArchivo(String nombreArchivo) {
+        File archivo = new File(nombreArchivo); 
+        archivo.delete();
+        System.out.println("Se Elimino el archivo");
+        
+    }
+    
 
 }
