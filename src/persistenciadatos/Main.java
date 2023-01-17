@@ -41,26 +41,70 @@ public class Main {
 //        //eliminar todos los elementos de  la lista 
 //        lista1.clear();
 //        System.out.println(lista1);
-        //SET: no permite la repetición de los datos y no respeta el orden en que se ingresan estos (orden aleatorio)
-        Set dias = new HashSet();
-        dias.add("Lunes");
-        dias.add("Martes");
-        dias.add("Miercoles");
-        dias.add("Jueves");
-        dias.add("Viernes");
+        //***********************************************************// 
+//        //SET: no permite la repetición de los datos y no respeta el orden en que se ingresan estos (orden aleatorio)
+//        Set dias = new HashSet();
+//        dias.add("Lunes");
+//        dias.add("Martes");
+//        dias.add("Miercoles");
+//        dias.add("Jueves");
+//        dias.add("Viernes");
+//        
+//        for(Object dia : dias){
+//            System.out.println(dia);
+//        }
+//        
+//        //como no entrega un orden definido, debo poner el nombre del elemento a eliminar
+//        dias.remove("Lunes");
+//        System.out.println(dias);
+//        
+//        //eliminar todo
+//        dias.clear();
+
+
+        //********************************************//
         
-        for(Object dia : dias){
-            System.out.println(dia);
+        
+        //MAP es independiente, no hereda de Colletion, es distinto
+        //cada dato se almacena con clave y valor 
+        Map numeros = new HashMap();
+
+        //asignar datos
+        numeros.put(1, "Uno"); //clave y valor)
+        numeros.put(2, "Dos");
+        numeros.put(3, "Tres");
+        numeros.put(4, "Cuatro");
+        numeros.put(5, "Cinco");
+        
+        System.out.println(numeros);
+        
+        //acceder a los datos
+        //LAS CLAVES SERÍAN COMO LOS ÍNDICES 
+        
+        System.out.println(numeros.get(1));
+        
+        //iterar los datos
+        
+       // for(Object valores : numeros.keySet()){ //con esto recupero las claves, tambien puedo poner .values
+        //    System.out.println(valores);
+        
+        //iterar para recuperar clave y valor
+        
+        for(Object clave : numeros.keySet()){
+            System.out.println(clave+" "+ numeros.get(clave));
+            
         }
         
-        //como no entrega un orden definido, debo poner el nombre del elemento a eliminar
-        dias.remove("Lunes");
-        System.out.println(dias);
+        //aliminar algún elemento
+        
+        numeros.remove(5);
+        System.out.println(numeros);
         
         //eliminar todo
-        dias.clear();
-           
+        
+        numeros.clear();
 
+           
     }
 
 }
